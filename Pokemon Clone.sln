@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokemon Clone.CSharp.Plugins", "Pokemon Clone.CSharp.Plugins.csproj", "{90E78007-3DF3-CB0D-7BFC-AC3A501A9A23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokemon Clone.CSharp", "Pokemon Clone.CSharp.csproj", "{92531905-6733-8F19-7C89-BE5E7EE39A71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokemon Clone.CSharp.Editor", "Pokemon Clone.CSharp.Editor.csproj", "{E923ACE7-F765-9D64-F0D9-0F5760BA61DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90E78007-3DF3-CB0D-7BFC-AC3A501A9A23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90E78007-3DF3-CB0D-7BFC-AC3A501A9A23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90E78007-3DF3-CB0D-7BFC-AC3A501A9A23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90E78007-3DF3-CB0D-7BFC-AC3A501A9A23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92531905-6733-8F19-7C89-BE5E7EE39A71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92531905-6733-8F19-7C89-BE5E7EE39A71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92531905-6733-8F19-7C89-BE5E7EE39A71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92531905-6733-8F19-7C89-BE5E7EE39A71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E923ACE7-F765-9D64-F0D9-0F5760BA61DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E923ACE7-F765-9D64-F0D9-0F5760BA61DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E923ACE7-F765-9D64-F0D9-0F5760BA61DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E923ACE7-F765-9D64-F0D9-0F5760BA61DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
