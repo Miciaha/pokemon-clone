@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour {
     public List<BasePokemon> allPokemon = new List<BasePokemon>();
     public List<PokemonMoves> allMoves = new List<PokemonMoves>();
 
+    public Sprite[] pokemonSprites;
+
 
     public Transform defensePodium;
     public Transform attackPodium;
@@ -48,7 +50,7 @@ public class GameManager : MonoBehaviour {
         BasePokemon tempPoke = dPoke.AddComponent<BasePokemon>() as BasePokemon;
         tempPoke.AddMember(battlePokemon);
 
-        dPoke.GetComponent<SpriteRenderer>().sprite = battlePokemon.image;
+        dPoke.GetComponent<SpriteRenderer>().sprite = battlePokemon.Image;
 
         bm.ChangeMenu(BattleMenu.Selection);
     }
@@ -58,7 +60,7 @@ public class GameManager : MonoBehaviour {
         List<BasePokemon> returnPokemon = new List<BasePokemon>();
         foreach (BasePokemon Pokemon in allPokemon)
         {
-            if (Pokemon.rarity == rarity)
+            if (Pokemon.Rarity == rarity)
             {
                 returnPokemon.Add(Pokemon);
             }

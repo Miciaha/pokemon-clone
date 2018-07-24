@@ -5,14 +5,14 @@ using UnityEngine.UI;
 public class BasePokemon : MonoBehaviour {
 
     public string PName;
-    public Sprite image;
-    public BiomeList biomeFound;
-    public PokemonType type;
-    public Rarity rarity;
+    public Sprite Image;
+    public BiomeList BiomeFound;
+    public PokemonType Type;
+    public Rarity Rarity;
     public Stat AttackStat;
     public Stat DefenceStat;
-    private int maxHP;
-    public int HP;
+    public int MaxHP;
+    private int HP;
 
     private int level;
 
@@ -24,23 +24,35 @@ public class BasePokemon : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        maxHP = HP;
+        MaxHP = HP;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
 	}
+    /*
+    public BasePokemon(string name, Sprite image, BiomeList biome, PokemonType type, Rarity rarity, Stat attack, Stat defense,int maxHP) {
+        PName = name;
+        Image = image;
+        BiomeFound = biome;
+        Type = type;
+        Rarity = rarity;
+        AttackStat = attack;
+        DefenceStat = defense;
+        MaxHP = maxHP;
+    }
+    */
 
     public void AddMember(BasePokemon bp)
     {
         this.PName = bp.PName;
-        this.image = bp.image;
-        this.biomeFound = bp.biomeFound;
-        this.type = bp.type;
-        this.rarity = bp.rarity;
+        this.Image = bp.Image;
+        this.BiomeFound = bp.BiomeFound;
+        this.Type = bp.Type;
+        this.Rarity = bp.Rarity;
         this.HP = bp.HP;
-        this.maxHP = bp.maxHP;
+        this.MaxHP = bp.MaxHP;
         this.AttackStat = bp.AttackStat;
         this.DefenceStat = bp.DefenceStat;
         this.pokemonStats = bp.pokemonStats;
@@ -49,6 +61,8 @@ public class BasePokemon : MonoBehaviour {
         this.level = bp.level;
 
     }
+
+    
 }
 
 public enum Rarity

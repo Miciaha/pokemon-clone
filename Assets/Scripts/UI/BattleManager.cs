@@ -112,6 +112,7 @@ public class BattleManager : MonoBehaviour {
                         bag.text = bagT;
                         pokemon.text = pokemonT;
                         run.text = runT;
+                        if (Input.GetKeyDown(KeyCode.Return)) { ChangeMenu(BattleMenu.Fight); }
                         break;
                     case 2:
                         fight.text = fightT;
