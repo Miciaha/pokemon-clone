@@ -6,7 +6,9 @@ public class GameManager : MonoBehaviour {
 
     public GameObject playerCamera;
     public GameObject battleCamera;
-    public GameObject player;
+    public GameObject overWorldPlayer;
+
+    public Player playerOwns;
 
     public List<BasePokemon> allPokemon = new List<BasePokemon>();
     public List<PokemonMoves> allMoves = new List<PokemonMoves>();
@@ -17,6 +19,7 @@ public class GameManager : MonoBehaviour {
     public Transform defensePodium;
     public Transform attackPodium;
     public GameObject emptyPoke;
+     
 
     public BattleManager bm;
 
@@ -34,15 +37,20 @@ public class GameManager : MonoBehaviour {
 
     public void EnterBattle(Rarity rarity)
     {
+        //change camera
         playerCamera.SetActive(false);
         battleCamera.SetActive(true);
 
+        //Find random pokemon
         BasePokemon battlePokemon = GetRandomPokemonFromList(GetPokemonByRarity(rarity));
+
 
         Debug.Log(battlePokemon.name);
 
-        player.GetComponent<PlayerMovement>().isAllowedToMove = false;
+        //stop player from moving
+        overWorldPlayer.GetComponent<PlayerMovement>().isAllowedToMove = false;
 
+        //instantiate enemy pokemon and player pokemon
         GameObject dPoke = Instantiate(emptyPoke, defensePodium.transform.position, Quaternion.identity) as GameObject;
 
         dPoke.transform.parent = defensePodium;
@@ -50,7 +58,30 @@ public class GameManager : MonoBehaviour {
         BasePokemon tempPoke = dPoke.AddComponent<BasePokemon>() as BasePokemon;
         tempPoke.AddMember(battlePokemon);
 
+        GameObject aPoke = Instantiate(emptyPoke, attackPodium.transform.position, Quaternion.identity) as GameObject;
+
+        aPoke.transform.parent = attackPodium;
+        
+        aPoke.GetComponent<SpriteRenderer>().sprite = playerOwns.ownedPokemon[0].pokemon.Image;
         dPoke.GetComponent<SpriteRenderer>().sprite = battlePokemon.Image;
+
+        //Sending pokemon to battle manager
+        bm.wildPokemon = battlePokemon;
+
+        //Add unique pokemon variables to battle menus
+        //moves
+        bm.movesList = playerOwns.ownedPokemon[0].moves;
+        bm.moveO.text = playerOwns.ownedPokemon[0].moves[0].Name;
+        bm.moveT.text = playerOwns.ownedPokemon[0].moves[1].Name;
+        //bm.moveTH.text = playerOwns.ownedPokemon[0].moves[2].Name;
+        //bm.movef.text = playerOwns.ownedPokemon[0].moves[3].Name;
+
+
+        //Names, Levels, 
+        bm.enemyName.text = battlePokemon.PName;
+        bm.pokemonName.text = playerOwns.ownedPokemon[0].pokemon.name;
+        bm.enemyLevel.text = battlePokemon.level.ToString();
+        bm.pokemonLevel.text = playerOwns.ownedPokemon[0].pokemon.level.ToString();
 
         bm.ChangeMenu(BattleMenu.Selection);
     }
@@ -77,16 +108,24 @@ public class GameManager : MonoBehaviour {
         poke = pokeList[pokeIndex];
         return poke;
     }
+
+    public void ExitBattle()
+    {
+        playerCamera.SetActive(true);
+        battleCamera.SetActive(false);
+        overWorldPlayer.GetComponent<PlayerMovement>().isAllowedToMove = true;
+    }
 }
 
 [System.Serializable]
 public class PokemonMoves
 {
-    string Name;
+    public string Name;
     public MoveType category;
     public Stat moveStat;
     public PokemonType moveType;
-    public int PP;
+    private int PP;
+    public int maxPP;
     public float power;
     public float accuracy;
 }

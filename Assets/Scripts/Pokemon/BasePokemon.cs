@@ -11,10 +11,10 @@ public class BasePokemon : MonoBehaviour {
     public Rarity Rarity;
     public Stat AttackStat;
     public Stat DefenceStat;
-    public int MaxHP;
-    private int HP;
+    private int MaxHP;
+    public int HP;
 
-    private int level;
+    public int level;
 
     public bool canEvolve;
 

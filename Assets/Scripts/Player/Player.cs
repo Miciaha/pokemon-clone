@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class Player : MonoBehaviour {
 
-    public List<BasePokemon> ownedPokemon = new List<BasePokemon>();
+    public List<OwnedPokemon> ownedPokemon = new List<OwnedPokemon>();
 
 
 

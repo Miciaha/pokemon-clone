@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pokemon-clone", "Assembly-CSharp.csproj", "{A2FA21B0-315C-4490-3485-9485D929F2F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pokemon-clone", "Assembly-CSharp-firstpass.csproj", "{DE45C35B-27A9-CBCC-2FC7-ABCFC6486A02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pokemon-clone", "Assembly-CSharp-Editor.csproj", "{4E8E1CD0-EB0F-D0B8-5F58-A1F295657127}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A2FA21B0-315C-4490-3485-9485D929F2F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2FA21B0-315C-4490-3485-9485D929F2F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2FA21B0-315C-4490-3485-9485D929F2F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2FA21B0-315C-4490-3485-9485D929F2F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE45C35B-27A9-CBCC-2FC7-ABCFC6486A02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE45C35B-27A9-CBCC-2FC7-ABCFC6486A02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE45C35B-27A9-CBCC-2FC7-ABCFC6486A02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE45C35B-27A9-CBCC-2FC7-ABCFC6486A02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E8E1CD0-EB0F-D0B8-5F58-A1F295657127}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E8E1CD0-EB0F-D0B8-5F58-A1F295657127}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E8E1CD0-EB0F-D0B8-5F58-A1F295657127}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E8E1CD0-EB0F-D0B8-5F58-A1F295657127}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
